@@ -42,7 +42,8 @@ const cart = []
 // const obj = {name:'shoe', price:9.99, qty: 3}
 // console.log(obj)
 // console.log(obj.price * obj.price)
-
+//---------------------------------------------------------------
+//Add item
 function addItem(name, price) {
     for (let i = 0; i < cart.length; i += 1) {
         if (cart[i].name === name) {
@@ -56,6 +57,8 @@ function addItem(name, price) {
     cart.push(item)
     
 }
+
+//--------------------------------------
 // Show Items
 function showItems() {
 
@@ -67,9 +70,9 @@ function showItems() {
     for (let i = 0; i < cart.length; i += 1) {
         console.log(`- ${cart[i].name} $${cart[i].price} x ${cart[i].qty}`)
     }
-
+}
     console.log(`Total in cart: $${getTotal()}`)
-
+//-------------------------------------------------------
     // get Qty
     function getQty() {
         let qty = 0
@@ -78,6 +81,8 @@ function showItems() {
         }
         return qty
     }
+
+    //-----------------------------------------------
     // Get total
     function getTotal() {
         let total = 0
@@ -86,9 +91,22 @@ function showItems() {
         }
         return total.toFixed(2)
     }
+    //---------------------------------------------------
+    function removeItem(name, qty = 0) {
+        for (let i = 0; i < cart.length; i += 1) {
+            if (cart[i].name === name) {
+                if (qty > 0) {
+                    cart[i].qty -= qty
+                }
+                if (cart[i].qty < 1 || qty === 0) {
+                    cart.splice(i, 1)
+                }
+                return
+            }
+        }
+    }  
 
-}
-
+//---------------------------------------------------
 addItem('Apple', 0.99)
 addItem('Orange', 1.29)
 addItem('Opinion', 0.02)
@@ -96,5 +114,11 @@ addItem('Apple', 0.99)
 addItem('Frisbee', 9.92)
 addItem('Apple', 0.99)
 addItem('Orange', 1.29)
+
+showItems()
+
+removeItem('Apple', 1)
+removeItem('Frisbee')
+
 
 showItems()
