@@ -189,18 +189,18 @@ function updateCart(name, qty) {
     }
 }
 //---------------------------------------------------
-addItem('Apple', 0.99)
-addItem('Orange', 1.29)
-addItem('Opinion', 0.02)
-addItem('Apple', 0.99)
-addItem('Frisbee', 9.92)
-addItem('Apple', 0.99)
-addItem('Orange', 1.29)
+// addItem('Apple', 0.99)
+// addItem('Orange', 1.29)
+// addItem('Opinion', 0.02)
+// addItem('Apple', 0.99)
+// addItem('Frisbee', 9.92)
+// addItem('Apple', 0.99)
+// addItem('Orange', 1.29)
 
-showItems()
+// showItems()
 
-removeItem('Apple', 1)
-removeItem('Frisbee')
+// removeItem('Apple', 1)
+// removeItem('Frisbee')
 
 
 showItems()

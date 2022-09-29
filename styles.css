@@ -51,9 +51,10 @@ h4 {
     border-width: 1px;
     border-style: solid;
     border-color: black;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-items: space; */
+    justify-content: space-between; 
+   
     
     
 }
@@ -65,18 +66,34 @@ h4 {
 .item p {
     font-size: 8px;
     padding: 6px;
+    display: flex;
+    flex-direction: column;
 
 }
 
 .item button {
     background-color: aquamarine;
+    font-size: 8px;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row;
     justify-content: center;
-    align-items: flex-end;
-    margin: auto;
+    align-items: flex-end; */
+    margin: 0.5em auto;
     
-    
-
     
 }
+
+footer {
+    font-size: 8px;
+    padding: 16px;
+}
+
+button {
+    background-color: lightgray;
+    font-size: 8px;
+
+}
+
+/* I wanted to move the prices down, and do more styling, 
+but I ran out of time
+I am still figuring out how things move with flex*/
