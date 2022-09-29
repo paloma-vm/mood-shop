@@ -30,7 +30,30 @@ for (let i = 0; i < data.length; i += 1) {
     button.innerHTML = "Add to Cart"
     newDiv.appendChild(button)
 
-
-
 }
 
+const cart = [ ]
+
+const obj = {name:'shoe', price:9.99, qty: 3}
+console.log(obj)
+console.log(obj.price * obj.price)
+
+function addItem(name, price) {
+    const item = {name: name, price: price, qty: 1}
+    cart.push(item)
+    
+}
+
+function showItems() {
+    // console.log(cart)
+    // console.log( cart[0] )
+    // console.log(cart.length)
+    console.log(`You have ${cart.length} items in your cart`)
+}
+
+addItem('Apple', 0.99)
+addItem('Orange', 1.29)
+addItem('Opinion', 0.02)
+addItem('Frisbee', 9.92)
+
+showItems()
